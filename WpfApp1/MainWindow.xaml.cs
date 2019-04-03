@@ -76,7 +76,7 @@ namespace WpfApp1
             keyValues.Add(new KeyValuePair<string, string>("typ", "ytsubs"));
             keyValues.Add(new KeyValuePair<string, string>("ytnick", txtJmeno.Text));
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost/userapi.php");
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://student.sps-prosek.cz/~vileton15/userapi.php");
             request.Content = new FormUrlEncodedContent(keyValues);
             var response = await client.SendAsync(request);
             string responseContent = await response.Content.ReadAsStringAsync();
